@@ -27,6 +27,7 @@ Twit.aceptar = function(e) {
 	console.log(Twit.twits);
 	Twit.cancelar(e);
 	Twit.mostrar();
+	Twit.guardar();
 }
 
 
@@ -57,6 +58,28 @@ Twit.mostrar = function(){
 }
 
 
+Twit.guardar = function() {
+
+	var twits = Twit.twits;
+	var twitsEncode = JSON.stringify(twits);
+	localStorage.setItem('twits', twitsEncode);
+
+}
+
+
+Twit.obtenerTwits = function() {
+
+	var twitsEncode = localStorage.getItem('twits');
+	var twits = JSON.parse(twitsEncode);
+	Twit.twits = twits;
+}
+
+Twit.obtenerTwits();
+Twit.mostrar();
+
+
+
+ 
 
 
 
