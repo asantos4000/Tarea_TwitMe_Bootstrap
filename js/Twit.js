@@ -23,10 +23,10 @@ Twit.enviar = function(e) {
 	var chat = document.getElementById('chat').value;
 	var mychat = new Twit(chat);
 	Twit.mychat.push(mychat);
-	console.log(Twit.mychat);
+	//console.log(Twit.mychat);
 	Twit.cancelar(e);
 	Twit.mostrar();
-	//Twit.guardar();
+	Twit.guardar();
 }
 
 
@@ -54,29 +54,33 @@ Twit.mostrar = function(){
 	});
 
 
-//<div id="" style="overflow:scroll; height:400px;">
-//</div>
-
-
 	document.getElementById('comentarios').innerHTML = comentarios;
 }
 
 
 Twit.guardar = function() {
 
-	var twits = Twit.twits;
-	var twitsEncode = JSON.stringify(twits);
-	localStorage.setItem('twits', twitsEncode);
+	var mychat = Twit.mychat;
+	var mychatEncode = JSON.stringify(mychat);
+	localStorage.setItem('mychat', mychatEncode);
 
 }
 
 
 Twit.obtenerTwits = function() {
 
-	var twitsEncode = localStorage.getItem('twits');
-	if (twitsEncode === !null) {
-	var twits = JSON.parse(twitsEncode);
-	Twit.twits = twits;
+	var mychatEncode = localStorage.getItem('mychat');
+	//console.log (mychatEncode);
+
+	if (mychatEncode != null) {
+	var mychat = JSON.parse(mychatEncode);
+	Twit.mychat = mychat;
+	//console.log (mychatEncode);
+	}
+	else {
+	var mychat = JSON.parse(mychatEncode);
+	Twit.mychat = [];
+
 	}
 }
 
