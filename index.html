@@ -22,75 +22,41 @@
 
 <body>
 
-
-	<div class="container">	
-		<header>
-
-		<div class="jumbotron">
-		  <div class="container">
-		    <h1>ChatMe</h1>
-		    <h1>Aldo Santos</h1>
-
-		  </div>
-		</div>	
-		</header>
-	</div>
-
-<main>
-	<div class="container">
-	 	
-
-			<form>
-			  
-			  <div class="form-group">
-			    <label for="chat">Ingrese Chat</label>
-			    <input type="chat" class="form-control" id="chat" placeholder="escriba su chat">
+	<header>
+		<div class="container">		
+			<div class="jumbotron">
+			  <div class="container">
+			    <h1>ChatMe</h1>
+			    <h1>Aldo Santos</h1>
 			  </div>
-			  
-			</form>
-
-
-
-			
-
-	<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-	<button onclick="Twit.enviar(event)" id="enviar" type="button" class="btn btn-primary btn-lg">Enviar</button>
-
-	
-	</div>
-
-	<section>
-		<form>
-			
-		<!--- 	<label for="titulo">Titulo</label> <input type="text" id="titulo">
-
-			<label for="desc">Descripcion</label> <textarea name="" id="desc" cols="30" rows="10"></textarea>
-
-			<button onclick="Twit.aceptar(event)" id="aceptar"> aceptar</button>
-
-			<button onclick="Twit.cancelar(event)" id="cancelar"> cancelar</button>
-		-->
-		</form>
-	</section>
-
-		 <div class="container">
-		<select id="comentarios" multiple class="form-control input-lg">
-
-		<!---
-			<section id="comentarios">
-
-
-			</section>
-		-->
-
-	</select>
-		
+			</div>		
 		</div>
+	</header>
 
-
+	<main>
+		
+		<div class="container">
+			<select id="comentarios" multiple class="form-control input-lg">
+		
+			</select>			
+		</div>
 
 	</main>
 
+	<footer>	
+		<nav class="navbar navbar-default navbar-fixed-bottom">
+				<div class="container">
+						<form>				
+						  <div class="form-group">
+						    <label for="chat">Ingrese Chat</label>
+						    <input type="chat" class="form-control" id="chat" placeholder="escriba su chat">
+						  </div>			  
+						</form>
+						
+					<button onclick="Twit.enviar(event)" id="enviar" type="button" class="btn btn-primary">Ingrese su chat</button>		
+				</div>
+		</nav>
+	</footer>
 
 </body>
 
