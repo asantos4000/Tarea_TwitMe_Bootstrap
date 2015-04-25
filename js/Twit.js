@@ -45,13 +45,18 @@ Twit.mostrar = function(){
 		//				+ '<h2>' + elemento.titulo +
 		//				'</h2<p>' + elemento.desc +		
 		//				'</p></article>';
-		comentarios +=  '<article>' 
+		comentarios += '<option>'  
 					+  '<h2>' + elemento.chat + '</h2>'
-				//	+  '<p>' + elemento.desc + '</p>'
-					+  '</article>';
+					+  '</option>';
+					
 		
 		
 	});
+
+
+//<div id="" style="overflow:scroll; height:400px;">
+//</div>
+
 
 	document.getElementById('comentarios').innerHTML = comentarios;
 }
