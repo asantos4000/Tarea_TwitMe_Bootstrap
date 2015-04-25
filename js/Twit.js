@@ -1,6 +1,6 @@
-function Twit(titulo,desc) {
-	this.titulo = titulo;
-	this.desc = desc;
+function Twit(chat) {
+	this.chat = chat;
+	//this.desc = desc;
 }
 
 //metodo de la clase
@@ -8,7 +8,7 @@ function Twit(titulo,desc) {
 	console.log('Hola !!');
 } */
 
-Twit.twits = [];
+Twit.mychat = [];
 
 // var twit = new Twit('Titulo', 'Lorem,,,')
 
@@ -17,38 +17,37 @@ Twit.twits = [];
 
 // obtener tiutlo y desciption y agregar sus valores aun arreglo
 
-Twit.aceptar = function(e) {
+Twit.enviar = function(e) {
 	
 	e.preventDefault(); // previen el comportamiento del formulario	
-	var titulo = document.getElementById('titulo').value;
-	var desc = document.getElementById('desc').value;
-	var twit = new Twit(titulo, desc)
-	Twit.twits.push(twit);
-	console.log(Twit.twits);
+	var chat = document.getElementById('chat').value;
+	var mychat = new Twit(chat);
+	Twit.mychat.push(mychat);
+	console.log(Twit.mychat);
 	Twit.cancelar(e);
 	Twit.mostrar();
-	Twit.guardar();
+	//Twit.guardar();
 }
 
 
 Twit.cancelar = function(e) {
 	e.preventDefault(); // previen el comportamiento del formulario	
-	var titulo = document.getElementById('titulo');
-	var desc = document.getElementById('desc');
-	titulo.value ='';
-	desc.value ='';
+	var chat = document.getElementById('chat');
+	//var desc = document.getElementById('desc');
+	chat.value ='';
+	//desc.value ='';
 }
 
 Twit.mostrar = function(){
 	var comentarios = '';
-	Twit.twits.map(function(elemento, indice) {
+	Twit.mychat.map(function(elemento, indice) {
 		//comentarios = comentarios + '<article>'
 		//				+ '<h2>' + elemento.titulo +
 		//				'</h2<p>' + elemento.desc +		
 		//				'</p></article>';
 		comentarios +=  '<article>' 
-					+  '<h2>' + elemento.titulo + '</h2>'
-					+  '<p>' + elemento.desc + '</p>'
+					+  '<h2>' + elemento.chat + '</h2>'
+				//	+  '<p>' + elemento.desc + '</p>'
 					+  '</article>';
 		
 		
@@ -70,8 +69,10 @@ Twit.guardar = function() {
 Twit.obtenerTwits = function() {
 
 	var twitsEncode = localStorage.getItem('twits');
+	if (twitsEncode === !null) {
 	var twits = JSON.parse(twitsEncode);
 	Twit.twits = twits;
+	}
 }
 
 Twit.obtenerTwits();

@@ -28,7 +28,9 @@
 
 		<div class="jumbotron">
 		  <div class="container">
-		    <h1>TwitMe</h1>
+		    <h1>ChatMe</h1>
+		    <h1>Aldo Santos</h1>
+
 		  </div>
 		</div>	
 		</header>
@@ -41,30 +43,20 @@
 			<form>
 			  
 			  <div class="form-group">
-			    <label for="titulo">Titulo</label>
-			    <input type="Titulo" class="form-control" id="titulo" placeholder="Titulo">
+			    <label for="chat">Ingrese Chat</label>
+			    <input type="chat" class="form-control" id="chat" placeholder="escriba su chat">
 			  </div>
 			  
 			</form>
 
 
 
-			<form>
-					  
-				<div class="form-group">
-					<label for="desc">Descripcion</label>
-					<input type="Descripcion" class="form-control" id="desc" placeholder="Descripcion">
-				</div>
-					  
-			</form>
-
+			
 
 	<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-	<button onclick="Twit.aceptar(event)" id="aceptar" type="button" class="btn btn-primary">Aceptar</button>
+	<button onclick="Twit.enviar(event)" id="enviar" type="button" class="btn btn-primary">Enviar</button>
 
-	<!-- Indicates a successful or positive action -->
-	<button onclick="Twit.cancelar(event)" id="cancelar" type="button" class="btn btn-danger">Cancelar</button>
-
+	
 	</div>
 
 	<section>
