@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
-	<link rel="stylesheet" href="">
+	<title>ChatMe</title>
+	
 </head>
 
 <!-- Latest compiled and minified CSS -->
@@ -12,6 +12,7 @@
 
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="assets/style.css">
 
 
 
@@ -27,7 +28,7 @@
 			<div class="jumbotron">
 			  <div class="container">
 			    <h1>ChatMe</h1>
-			    <h1>Aldo Santos</h1>
+			    <h5>Aldo Santos</h5>
 			  </div>
 			</div>		
 		</div>
@@ -37,12 +38,16 @@
 
 		<div class="container">
 			<div class="panel panel-success">
-	  			<div class="panel-heading">
-					<h3 class="panel-title">Mis Chats</h3>
-	  			</div>
+		  			<div class="panel-heading">
+						<h3 class="panel-title">Mis Chats</h3>
+		  			</div>
 					<select id="comentarios" multiple class="form-control input-lg">
-					</select>			
+					</select>
+
 			</div>
+
+
+		<input onclick="Twit.cancelar(event)" class="btn btn-danger" type="button" id="btnSelected" value="Borrar Chat" />
 		</div>
 	
 	</main>
